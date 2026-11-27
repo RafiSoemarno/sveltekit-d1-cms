@@ -1,0 +1,42 @@
+node_modules
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+
+# OS
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
+
+# Env
+.env
+.env.*
+.dev.vars*
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Local agent resources (symlinked shared skills)
+/.agents/skills
+
+# Local reference docs
+/.docs
+
+# Local agent/editor tooling and instructions (not part of the published site)
+/AGENTS.md
+/opencode.json
+/skills-lock.json
+/.vscode
+
+# Local-only deploy configuration (real account, database, and route identifiers)
+/wrangler.local.jsonc
+/wrangler.staging.local.jsonc
+
+# Local-only database seed (real content)
+/db/seed.local.sql

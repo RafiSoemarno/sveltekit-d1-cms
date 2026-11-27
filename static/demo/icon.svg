@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Icon placeholder">
+  <circle cx="32" cy="32" r="30" fill="#eef5fa"/>
+  <path d="M32 16l14 8v16l-14 8-14-8V24z" fill="none" stroke="#006599" stroke-width="4" stroke-linejoin="round"/>
+</svg>

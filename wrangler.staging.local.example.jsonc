@@ -1,0 +1,29 @@
+{
+	// Copy to `wrangler.staging.local.jsonc` (gitignored) and fill in your own
+	// values. `npm run deploy:staging` uses this file.
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "content-cms-staging",
+	"account_id": "<account-id>",
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	"compatibility_date": "2026-08-14",
+	"compatibility_flags": ["nodejs_compat"],
+	"workers_dev": true,
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare"
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "<staging-database-name>",
+			"database_id": "<staging-database-id>"
+		}
+	],
+	"r2_buckets": [
+		{
+			"binding": "MEDIA",
+			"bucket_name": "<staging-bucket-name>"
+		}
+	],
+	"observability": { "enabled": true }
+}

@@ -1,0 +1,33 @@
+{
+	// Local development configuration with placeholder bindings.
+	//
+	// Real account, database, bucket, and route identifiers live in
+	// `wrangler.local.jsonc`, which is gitignored. Copy
+	// `wrangler.local.example.jsonc` to create it, then deploy with
+	// `npm run deploy`.
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "content-cms",
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	"compatibility_date": "2026-08-14",
+	"compatibility_flags": ["nodejs_compat"],
+	"workers_dev": false,
+	"preview_urls": false,
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare"
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "content",
+			"database_id": "00000000-0000-0000-0000-000000000000"
+		}
+	],
+	"r2_buckets": [
+		{
+			"binding": "MEDIA",
+			"bucket_name": "media-local"
+		}
+	],
+	"observability": { "enabled": true }
+}

@@ -1,0 +1,31 @@
+{
+	// Copy to `wrangler.local.jsonc` (gitignored) and fill in your own values.
+	// `npm run deploy` uses this file, so real identifiers never enter git.
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "content-cms",
+	"account_id": "<account-id>",
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	"compatibility_date": "2026-08-14",
+	"compatibility_flags": ["nodejs_compat"],
+	"workers_dev": false,
+	"preview_urls": false,
+	"routes": [{ "pattern": "<your-domain>", "custom_domain": true }],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare"
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "<database-name>",
+			"database_id": "<database-id>"
+		}
+	],
+	"r2_buckets": [
+		{
+			"binding": "MEDIA",
+			"bucket_name": "<bucket-name>"
+		}
+	],
+	"observability": { "enabled": true }
+}

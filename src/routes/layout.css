@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-brand-orange: #ff9934;
+	--color-brand-blue: #006599;
+	--color-brand-black: #040404;
+	--color-brand-red: #cc0033;
+	--color-brand-white: #f9fdff;
+}
+
+@utility animate-marquee {
+	animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+.animate-marquee:hover,
+.animate-marquee:focus-within {
+	animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.animate-marquee {
+		animation: none;
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 8rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}

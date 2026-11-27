@@ -1,0 +1,30 @@
+{
+	// Local development configuration for the staging Worker.
+	//
+	// Real identifiers live in `wrangler.staging.local.jsonc`, which is
+	// gitignored. Copy `wrangler.staging.local.example.jsonc` to create it.
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "content-cms-staging",
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	"compatibility_date": "2026-08-14",
+	"compatibility_flags": ["nodejs_compat"],
+	"workers_dev": true,
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare"
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "content-staging",
+			"database_id": "00000000-0000-0000-0000-000000000000"
+		}
+	],
+	"r2_buckets": [
+		{
+			"binding": "MEDIA",
+			"bucket_name": "media-local-staging"
+		}
+	],
+	"observability": { "enabled": true }
+}

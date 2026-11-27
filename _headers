@@ -1,0 +1,4 @@
+# SvelteKit's version file describes the bytes currently deployed. A cached copy
+# makes production verification and the watcher read stale facts, so never store it.
+/_app/version.json
+  Cache-Control: no-store
